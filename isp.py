@@ -60,8 +60,8 @@ def extract_values_from_image(img_element):
 def process_npix():
     """Process NPIX data."""
     driver.get("https://nms2.npix.net.np/login")
-    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.NAME, "username"))).send_keys("silverlining")
-    driver.find_element(By.NAME, "password").send_keys("N&p@I#x@@2019%%", Keys.RETURN)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.NAME, "username"))).send_keys("username")
+    driver.find_element(By.NAME, "password").send_keys("password", Keys.RETURN)
     time.sleep(5)  # Wait for login to complete
 
     driver.find_element(By.XPATH, '//a[@data-toggle="tab" and @href="#ports"]').click()
@@ -82,8 +82,8 @@ def process_npix():
 def process_wlink(circuit_id, field_names):
     """Process WLINK data."""
     driver.get("https://corporate.worldlink.com.np/login/index")
-    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.NAME, "username"))).send_keys("S249")
-    driver.find_element(By.NAME, "password").send_keys("4120", Keys.RETURN)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.NAME, "username"))).send_keys("username")
+    driver.find_element(By.NAME, "password").send_keys("password", Keys.RETURN)
     WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.CLASS_NAME, "cktarea"))).click()
     time.sleep(3)
     WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.ID, circuit_id))).click()
@@ -105,8 +105,8 @@ def process_subisu():
     driver.get("https://graph.subisu.net.np/index.php")
     time.sleep(3)
     driver.switch_to.frame("page")
-    WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.ID, "username"))).send_keys("silverlining")
-    driver.find_element(By.ID, "password").send_keys("123456", Keys.RETURN)
+    WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.ID, "username"))).send_keys("username")
+    driver.find_element(By.ID, "password").send_keys("password", Keys.RETURN)
     time.sleep(2)
     driver.switch_to.default_content()
 
@@ -130,8 +130,8 @@ def process_subisu():
 def process_mos():
     """Process MOS data."""
     driver.get("https://monitoring.mos.com.np/index.php")
-    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.NAME, "login_username"))).send_keys("SilverMOS")
-    driver.find_element(By.NAME, "login_password").send_keys("S@<>.M0S", Keys.RETURN)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.NAME, "login_username"))).send_keys("username")
+    driver.find_element(By.NAME, "login_password").send_keys("password", Keys.RETURN)
     # WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//input[@type='submit' and @value='Login']"))).click()
     time.sleep(3)
 
