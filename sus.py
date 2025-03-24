@@ -26,8 +26,8 @@ def login():
     password_input = wait.until(EC.visibility_of_element_located((By.ID, "password")))
     login_button = wait.until(EC.element_to_be_clickable((By.XPATH, "//input[@value='Login!!']")))
 
-    username_input.send_keys("silverlining")
-    password_input.send_keys("123456")
+    username_input.send_keys("username")
+    password_input.send_keys("password")
     login_button.click()
     time.sleep(2)
     driver.switch_to.default_content()
