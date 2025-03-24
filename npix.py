@@ -13,8 +13,8 @@ driver.get("https://nms2.npix.net.np/login")  # Replace with actual login URL
 username_input = driver.find_element(By.NAME, "username")  # Replace with actual field name
 password_input = driver.find_element(By.NAME, "password")  # Replace with actual field name
 
-username_input.send_keys("silverlining")  # Replace with actual username
-password_input.send_keys("N&p@I#x@@2019%%")  # Replace with actual password
+username_input.send_keys("username")  # Replace with actual username
+password_input.send_keys("password")  # Replace with actual password
 password_input.send_keys(Keys.RETURN)
 
 # Wait for login to complete
