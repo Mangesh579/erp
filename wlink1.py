@@ -24,11 +24,11 @@ try:
     
     # Enter username
     username_input = driver.find_element(By.NAME, "username")
-    username_input.send_keys("S249")  # Replace with actual username
+    username_input.send_keys("username")  # Replace with actual username
     
     # Enter password
     password_input = driver.find_element(By.NAME, "password")
-    password_input.send_keys("4120")  # Replace with actual password
+    password_input.send_keys("password")  # Replace with actual password
     
     # Click the login button
     WebDriverWait(driver, 10).until(
